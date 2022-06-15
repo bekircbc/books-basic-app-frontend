@@ -7,6 +7,7 @@ export const useFetch = (url, useMockWait) => {
   useEffect(() => {
     (async () => {
       const _items = (await axios.get(url)).data;
+
       if (useMockWait) {
         setTimeout(() => {
           setItems(_items);
