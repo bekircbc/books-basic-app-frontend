@@ -1,5 +1,5 @@
 import "./App.scss";
-import { PageWelcome } from "./pages/PageWelcome";
+import { PageNouns } from "./pages/PageNouns";
 import { PageBooks } from "./pages/PageBooks";
 import { PageUseToggle } from "./pages/PageUseToggle";
 import { PageAbout } from "./pages/PageAbout";
@@ -10,17 +10,17 @@ function App() {
     <div className="App">
       <h1>React Custom Hooks</h1>
       <hr />
-      <NavLink to="/welcome">Welcome</NavLink> |{" "}
+      <NavLink to="/about">About</NavLink> |{" "}
+      <NavLink to="/nouns">Nouns</NavLink> |{" "}
       <NavLink to="/books">Books</NavLink> |{" "}
-      <NavLink to="/use-toggle">UseToggle</NavLink> |{" "}
-      <NavLink to="/about">About</NavLink>
-      <hr />
+      <NavLink to="/use-toggle">UseToggle</NavLink> <hr />
       <Routes>
-        <Route path="/welcome" element={<PageWelcome />} />
+        <Route path="/about" element={<PageAbout />} />
+        <Route path="/nouns" element={<PageNouns />} />
         <Route path="/books" element={<PageBooks />} />
         <Route path="/use-toggle" element={<PageUseToggle />} />
-        <Route path="/about" element={<PageAbout />} />
-        <Route path="/" element={<Navigate to="/welcome" replace />} />
+
+        <Route path="/" element={<Navigate to="/about" replace />} />
       </Routes>
     </div>
   );
