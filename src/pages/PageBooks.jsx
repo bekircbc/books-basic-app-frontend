@@ -1,16 +1,16 @@
 import { useFetch } from "../hooks/useFetch";
 
 export const PageBooks = () => {
-  const { items, itemTotal } = useFetch("http://localhost:4433/");
-
-  console.log(items, itemTotal);
+  const { items: books, itemTotal: totalBooks } = useFetch(
+    "http://localhost:4433/book"
+  );
 
   return (
     <div className="page_books">
-      <h2>There are {itemTotal} books.</h2>
+      <h2>There are {totalBooks} books.</h2>
 
       <ul>
-        {items.map((book) => {
+        {books.map((book) => {
           return <li key={book.id}>{book.title}</li>;
         })}
       </ul>
