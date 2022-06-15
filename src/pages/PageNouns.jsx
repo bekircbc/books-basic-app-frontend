@@ -5,14 +5,10 @@ export const PageNouns = () => {
     "http://localhost:4433/nouns"
   );
 
-  // 	const createMarkup = () => {
-  // return {_html:{}}
-  // 	}
-
   console.log(nouns);
 
   return (
-    <div className="page_welcome">
+    <div className="page_nouns">
       <h2>Nouns</h2>
       <h2>There are {totalNouns} nouns.</h2>
       <p>Explore the nouns in german on this site.</p>
