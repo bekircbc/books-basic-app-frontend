@@ -1,6 +1,7 @@
 import "./App.scss";
 import { PageNouns } from "./pages/PageNouns";
 import { PageBooks } from "./pages/PageBooks";
+import { PageEmployees } from "./pages/PageEmployees";
 import { PageUseToggle } from "./pages/PageUseToggle";
 import { PageAbout } from "./pages/PageAbout";
 import { NavLink, Routes, Route, Navigate } from "react-router-dom";
@@ -13,11 +14,13 @@ function App() {
       <NavLink to="/about">About</NavLink> |{" "}
       <NavLink to="/nouns">Nouns</NavLink> |{" "}
       <NavLink to="/books">Books</NavLink> |{" "}
+      <NavLink to="/employees">Employees</NavLink> |{" "}
       <NavLink to="/use-toggle">UseToggle</NavLink> <hr />
       <Routes>
         <Route path="/about" element={<PageAbout />} />
         <Route path="/nouns" element={<PageNouns />} />
         <Route path="/books" element={<PageBooks />} />
+        <Route path="/emloyees" element={<PageEmployees />} />
         <Route path="/use-toggle" element={<PageUseToggle />} />
 
         <Route path="/" element={<Navigate to="/about" replace />} />
